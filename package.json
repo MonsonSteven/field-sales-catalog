@@ -1,8 +1,8 @@
 {
-  "name": "htc-catalog",
+  "name": "summit-catalog",
   "version": "0.1.0",
   "private": true,
-  "description": "HTC product catalog platform — ingestion pipeline, normalizer, pricing, and Next.js catalog. MVP: Vanity Art (Shopify products.json) source.",
+  "description": "Offline-first product catalog PWA for field sales reps (portfolio demo, synthetic data).",
   "scripts": {
     "dev": "next dev -p 3000",
     "dev:clean": "node -e \"require('fs').rmSync('.next',{recursive:true,force:true})\" && next dev -p 3000",
