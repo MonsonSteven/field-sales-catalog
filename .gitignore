@@ -1,0 +1,44 @@
+# dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# env / secrets
+.env
+.env.*
+!.env.example
+
+# build output
+.next/
+out/
+dist/
+build/
+*.tsbuildinfo
+
+# payload / db
+/media
+*.sqlite
+
+# logs
+*.log
+npm-debug.log*
+
+# os
+.DS_Store
+Thumbs.db
+
+# NOTE: data/ is intentionally tracked for now — the normalized catalog is a
+# reviewable artifact during MVP. Revisit once ingestion runs server-side.
+
+# Serwist-generated service worker (build artifacts)
+public/sw.js
+public/sw.js.map
+public/swe-worker-*.js
+
+# Source assets & internal docs — not part of the app build/repo
+/Toilets/
+/HTC-Catalog-Build-Report.docx
+/Faucet-Catalog-Sourcing-Position.md
+
+# Scratch analysis artifact — the annotated copy Steven maintains is source of truth
+vanity-classification-audit.csv

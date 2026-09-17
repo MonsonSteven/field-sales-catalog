@@ -1,0 +1,12 @@
+{
+  "//": "Tests are deliberately OUTSIDE the root tsconfig's include, so a test can never break `next build`. Typecheck them on demand: npx tsc -p tests --noEmit",
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "types": ["node"],
+    "allowImportingTsExtensions": true,
+    "module": "esnext",
+    "moduleResolution": "bundler"
+  },
+  "include": ["**/*.ts", "../lib/**/*.ts", "../schema/**/*.ts"]
+}

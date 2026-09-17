@@ -1,0 +1,47 @@
+{
+  "name": "htc-catalog",
+  "version": "0.1.0",
+  "private": true,
+  "description": "HTC product catalog platform — ingestion pipeline, normalizer, pricing, and Next.js catalog. MVP: Vanity Art (Shopify products.json) source.",
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "dev:clean": "node -e \"require('fs').rmSync('.next',{recursive:true,force:true})\" && next dev -p 3000",
+    "dev:turbo": "node -e \"require('fs').rmSync('.next',{recursive:true,force:true})\" && next dev -p 3000 --turbopack",
+    "build": "next build --webpack",
+    "start": "next start -p 3000",
+    "payload": "payload",
+    "generate:types": "payload generate:types",
+    "generate:importmap": "payload generate:importmap",
+    "ingest": "node pipeline/run.mjs",
+    "ingest:offline": "node pipeline/run.mjs --offline",
+    "hygiene:pricing": "node --import ./tests/ts-resolve.mjs --no-warnings=MODULE_TYPELESS_PACKAGE_JSON scripts/pricing-outliers.mjs",
+    "test": "node --import ./tests/ts-resolve.mjs --no-warnings=MODULE_TYPELESS_PACKAGE_JSON --test \"tests/*.test.ts\" \"tests/*.test.mjs\"",
+    "test:watch": "node --import ./tests/ts-resolve.mjs --no-warnings=MODULE_TYPELESS_PACKAGE_JSON --test --watch \"tests/*.test.ts\" \"tests/*.test.mjs\""
+  },
+  "dependencies": {
+    "@payloadcms/db-postgres": "^3.86.0",
+    "@payloadcms/email-nodemailer": "^3.86.0",
+    "@payloadcms/next": "^3.86.0",
+    "@payloadcms/richtext-lexical": "^3.86.0",
+    "@serwist/next": "^9.5.12",
+    "@vercel/blob": "^2.6.1",
+    "dexie": "^4.4.4",
+    "graphql": "^16.14.2",
+    "next": "16.2.12",
+    "payload": "^3.86.0",
+    "pg": "^8.22.0",
+    "react": "^19.0.8",
+    "react-dom": "^19.0.8",
+    "serwist": "^9.5.12",
+    "sharp": "^0.35.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.16.11",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "typescript": "^5.6.3"
+  },
+  "engines": {
+    "node": "24.x"
+  }
+}
