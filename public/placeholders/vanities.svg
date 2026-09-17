@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" role="img" aria-label="Vanity — placeholder image">
+  <rect width="600" height="450" fill="#eef7f0"/>
+  <g fill="none" stroke="#14532d" stroke-width="6" stroke-linejoin="round">
+    <rect x="180" y="150" width="240" height="170" rx="6" fill="#ffffff"/>
+    <line x1="300" y1="150" x2="300" y2="320"/>
+    <rect x="170" y="132" width="260" height="22" rx="4" fill="#86efac" stroke="none"/>
+    <circle cx="240" cy="235" r="8" fill="#14532d" stroke="none"/>
+    <circle cx="360" cy="235" r="8" fill="#14532d" stroke="none"/>
+  </g>
+  <text x="300" y="380" text-anchor="middle" font-family="Georgia, serif" font-size="26" fill="#14532d">Vanity</text>
+  <text x="300" y="410" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#4b6b57">Artisan Bath Co. · demo image</text>
+</svg>

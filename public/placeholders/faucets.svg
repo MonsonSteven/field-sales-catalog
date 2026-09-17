@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" role="img" aria-label="Faucet — placeholder image">
+  <rect width="600" height="450" fill="#f0f5f2"/>
+  <g fill="none" stroke="#14532d" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M270 300 L270 200 Q270 160 320 160 L360 160"/>
+    <path d="M360 160 L360 185"/>
+    <rect x="250" y="300" width="40" height="20" rx="4" fill="#86efac" stroke="none"/>
+    <line x1="235" y1="210" x2="270" y2="210"/>
+  </g>
+  <text x="300" y="380" text-anchor="middle" font-family="Georgia, serif" font-size="26" fill="#14532d">Faucet</text>
+  <text x="300" y="410" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#4b6b57">Artisan Bath Co. · demo image</text>
+</svg>

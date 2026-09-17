@@ -18,16 +18,6 @@ export default buildConfig({
     user: Users.slug,
     importMap: { baseDir: path.resolve(dirname) },
     meta: { titleSuffix: "· Summit Catalog Admin" },
-    components: {
-      beforeDashboard: [
-        // "Sync now" button intentionally removed (2026-07-29): sync is demoted to a
-        // deliberate re-import tool (POST /tools/sync, or runSync in a guarded route)
-        // rather than a casual one-click op — Artisan Bath Co. rarely changes and a sync now
-        // carries side effects (price recompute) that shouldn't be a stray click away.
-        // The engine (lib/sync.ts) is kept for dealer-sheet refreshes / new partners.
-        "/components/admin/MirrorButton#MirrorButton",
-      ],
-    },
   },
   collections: [Users, Partners, Categories, AttributeDefinitions, Products],
   editor: lexicalEditor(),

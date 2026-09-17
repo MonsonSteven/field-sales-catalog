@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" role="img" aria-label="Toilet — placeholder image">
+  <rect width="600" height="450" fill="#f0f5f2"/>
+  <g fill="none" stroke="#14532d" stroke-width="6" stroke-linejoin="round">
+    <rect x="250" y="130" width="90" height="70" rx="6" fill="#86efac" stroke="none"/>
+    <path d="M250 210 Q250 300 300 300 Q350 300 350 210 Z" fill="#ffffff"/>
+    <ellipse cx="300" cy="230" rx="34" ry="20" fill="#eef6f1"/>
+  </g>
+  <text x="300" y="370" text-anchor="middle" font-family="Georgia, serif" font-size="26" fill="#14532d">Toilet</text>
+  <text x="300" y="400" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#4b6b57">Artisan Bath Co. · demo image</text>
+</svg>

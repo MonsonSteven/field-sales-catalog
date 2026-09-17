@@ -12,9 +12,7 @@
     "payload": "payload",
     "generate:types": "payload generate:types",
     "generate:importmap": "payload generate:importmap",
-    "ingest": "node pipeline/run.mjs",
-    "ingest:offline": "node pipeline/run.mjs --offline",
-    "hygiene:pricing": "node --import ./tests/ts-resolve.mjs --no-warnings=MODULE_TYPELESS_PACKAGE_JSON scripts/pricing-outliers.mjs",
+    "seed": "node --import ./tests/ts-resolve.mjs --no-warnings=MODULE_TYPELESS_PACKAGE_JSON scripts/seed.mjs",
     "test": "node --import ./tests/ts-resolve.mjs --no-warnings=MODULE_TYPELESS_PACKAGE_JSON --test \"tests/*.test.ts\" \"tests/*.test.mjs\"",
     "test:watch": "node --import ./tests/ts-resolve.mjs --no-warnings=MODULE_TYPELESS_PACKAGE_JSON --test --watch \"tests/*.test.ts\" \"tests/*.test.mjs\""
   },

@@ -46,9 +46,16 @@ Payload's local API, which bypasses collection access control, so the guard is t
 this public demo, `DEMO_OPEN_ACCESS=true` removes the login wall so anyone can browse — the auth code
 stays intact and is used whenever the flag is off. The Payload **admin** keeps its own login.
 
-## What's next in this demo
+## Run it
 
-The storefront, admin, presentation mode, offline shell, and estimate builder are in place and
-green. Still to add: a **synthetic catalog seed** (fictional Artisan Bath Co. products with invented
-prices) and **neutral placeholder images**, plus the Neon + Vercel deploy steps — see the commit
-history / `DEMO-SETUP.md`.
+```bash
+npm install
+cp .env.example .env      # set DATABASE_URI + PAYLOAD_SECRET; PAYLOAD_DB_PUSH=true on first run
+npm run dev               # http://localhost:3000  (create the first admin at /admin)
+npm run seed              # load the synthetic Artisan Bath Co. catalog
+npm test                 # 217 tests
+```
+
+Full Neon + Vercel steps are in [`DEMO-SETUP.md`](DEMO-SETUP.md). A synthetic seed
+(`scripts/seed.mjs`) populates a fictional catalog with invented prices and neutral placeholder
+images (`public/placeholders/`).

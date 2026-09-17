@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" role="img" aria-label="Mirror — placeholder image">
+  <rect width="600" height="450" fill="#eef6f1"/>
+  <g fill="none" stroke="#14532d" stroke-width="6" stroke-linejoin="round">
+    <rect x="240" y="120" width="120" height="180" rx="60" fill="#ffffff"/>
+    <path d="M270 160 Q300 145 330 160" stroke="#86efac" stroke-width="8" fill="none"/>
+  </g>
+  <text x="300" y="360" text-anchor="middle" font-family="Georgia, serif" font-size="26" fill="#14532d">Mirror</text>
+  <text x="300" y="390" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#4b6b57">Artisan Bath Co. · demo image</text>
+</svg>

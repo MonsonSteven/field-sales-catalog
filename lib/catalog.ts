@@ -268,7 +268,7 @@ export async function getSnapshot(): Promise<CatalogSnapshot> {
   return {
     version: String(maxTs || 0),
     generatedAt: new Date().toISOString(),
-    partner: "vanity-art",
+    partner: "artisan-bath",
     products,
     attributeDefinitions,
   };
