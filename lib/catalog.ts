@@ -117,24 +117,6 @@ const listPublished = cache(async (): Promise<any[]> => {
   return res.docs;
 });
 
-/**
- * When the catalog data was last written by a sync = max(product.updatedAt).
- * This is the SAME value `getSnapshot()` reports as `version`, so the online page and an
- * offline device describe freshness identically (offline reads it from its own snapshot, so
- * it reports the age of the data that device actually holds). Cheap: one indexed row.
- */
-export const getDataFreshness = cache(async (): Promise<string | null> => {
-  const payload = await db();
-  const res = await payload.find({
-    collection: "products",
-    where: { status: { equals: "published" } },
-    sort: "-updatedAt",
-    limit: 1,
-    depth: 0,
-  });
-  return (res.docs[0] as any)?.updatedAt ?? null;
-});
-
 const allAttrDefs = cache(async (): Promise<AttrDef[]> => {
   const payload = await db();
   const res = await payload.find({ collection: "attributeDefinitions", depth: 1, limit: 1000, pagination: false });

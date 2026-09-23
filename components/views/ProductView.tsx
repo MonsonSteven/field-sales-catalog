@@ -24,7 +24,6 @@ import {
   VariantSpecSheet,
 } from "@/components/VariantImage";
 import AddToEstimate, { type EstimateOption } from "@/components/AddToEstimate";
-import DataFreshness from "@/components/DataFreshness";
 
 function renderValue(v: AttributeValue, unit?: string | null): string {
   const withUnit = (s: string) => (unit ? `${s} ${unit}` : s);
@@ -36,14 +35,10 @@ export default function ProductView({
   product,
   defs,
   configurator = null,
-  dataAsOf = null,
 }: {
   product: Product;
   defs: AttrDef[];
   configurator?: Configurator | null;
-  /** When the catalog data was last synced. ISO (server) or epoch-ms string (offline
-   *  `snapshot.version`). Drives the rep-facing freshness line under the price. */
-  dataAsOf?: string | number | null;
 }) {
   const price = itemPrice(product);
   const hasRange =
@@ -213,8 +208,6 @@ export default function ProductView({
             </div>
           )}
 
-          {/* How old is this stock/pricing? Rep-facing only — availability moves daily. */}
-          <DataFreshness value={dataAsOf} />
 
 
           {visibleDefs.length > 0 ? (

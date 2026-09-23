@@ -117,9 +117,6 @@ export default function OfflineAppShell() {
         product={p}
         defs={attrDefsForCategory(attrDefs, p.category)}
         configurator={buildConfigurator(p, products)}
-        // From THIS DEVICE's snapshot, so the age shown is the age of the data the rep
-        // actually has offline — not the server's.
-        dataAsOf={snapshot.version}
       />
     );
   }

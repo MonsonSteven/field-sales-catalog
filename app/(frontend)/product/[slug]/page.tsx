@@ -1,5 +1,5 @@
 import { notFound, redirect } from "next/navigation";
-import { getProductBySlug, getProductBySourceId, getAttrDefs, getAllProducts, getDataFreshness } from "@/lib/catalog";
+import { getProductBySlug, getProductBySourceId, getAttrDefs, getAllProducts } from "@/lib/catalog";
 import { buildConfigurator } from "@/lib/catalog-shared";
 import { requireUser } from "@/lib/auth";
 import ProductView from "@/components/views/ProductView";
@@ -27,11 +27,10 @@ export default async function ProductPage({
     notFound();
   }
 
-  const [defs, all, dataAsOf] = await Promise.all([
+  const [defs, all] = await Promise.all([
     getAttrDefs(product.category),
     getAllProducts(),
-    getDataFreshness(),
   ]);
   const configurator = buildConfigurator(product, all);
-  return <ProductView product={product} defs={defs} configurator={configurator} dataAsOf={dataAsOf} />;
+  return <ProductView product={product} defs={defs} configurator={configurator} />;
 }
